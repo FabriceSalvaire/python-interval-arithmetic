@@ -1,0 +1,7 @@
+include MANIFEST.in
+include README.rst
+include setup_data.py
+recursive-include tools *
+recursive-include unit-test *.py
+prune build
+prune doc/sphinx/build
