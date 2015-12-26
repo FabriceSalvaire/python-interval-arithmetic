@@ -208,6 +208,15 @@ class Interval(object):
     ##############################################
 
     @property
+    def radius(self):
+
+        """ Return length / 2. """
+
+        return .5 * (self.sup - self.inf)
+
+    ##############################################
+
+    @property
     def centre(self):
 
         """ Return the interval's centre. """
@@ -673,6 +682,15 @@ class Interval2D(object):
         """ Return the horizontal and vertical length. """
 
         return self.x.length, self.y.length
+
+    ##############################################
+
+    @property
+    def radius(self):
+
+        """ Return the horizontal and vertical radius. """
+
+        return self.x.radius, self.y.radius
 
     ##############################################
 
