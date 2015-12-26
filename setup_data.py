@@ -55,7 +55,7 @@ setup_dict = dict(
     long_description=long_description,
     # cf. http://pypi.python.org/pypi?%3Aaction=list_classifiers
     classifiers=[
-        "TTopic :: Scientific/Engineering :: Mathematics",
+        "Topic :: Scientific/Engineering :: Mathematics",
         "Intended Audience :: Developers",
         "Development Status :: 5 - Production/Stable",
         "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
