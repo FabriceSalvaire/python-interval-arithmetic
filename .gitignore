@@ -1,0 +1,6 @@
+*~
+__pycache__
+MANIFEST
+build/
+dist/
+setenv.sh
