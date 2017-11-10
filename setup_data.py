@@ -44,7 +44,7 @@ long_description = read('README.rst')
 
 setup_dict = dict(
     name='ArithmeticInterval',
-    version='0.1.0',
+    version='0.2.0',
     author='Fabrice Salvaire',
     author_email='fabrice.salvaire@orange.fr',
     description='A Python Arithmetic Interval Module',
@@ -63,9 +63,3 @@ setup_dict = dict(
         "Programming Language :: Python :: 3.4",
         ],
     )
-
-####################################################################################################
-#
-# End
-#
-####################################################################################################
