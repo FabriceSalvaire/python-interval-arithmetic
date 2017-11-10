@@ -31,6 +31,7 @@ __all__ = ['Interval',
 ####################################################################################################
 
 import math
+import struct
 import sys
 
 ####################################################################################################
@@ -217,9 +218,9 @@ class Interval(object):
     ##############################################
 
     @property
-    def centre(self):
+    def center(self):
 
-        """ Return the interval's centre. """
+        """ Return the interval's center. """
 
         return .5*(self.inf + self.sup)
 
@@ -481,6 +482,12 @@ class IntervalInt(Interval):
 
     ##############################################
 
+    def __hash__(self):
+
+        return hash(struct.pack('ii', self.inf, self.sup))
+
+    ##############################################
+
     @property
     def length(self):
 
@@ -713,11 +720,11 @@ class Interval2D(object):
     ##############################################
 
     @property
-    def centre(self):
+    def center(self):
 
-        """ Return the interval's centre. """
+        """ Return the interval's center. """
 
-        return self.x.centre, self.y.centre
+        return self.x.center, self.y.center
 
     ##############################################
 
@@ -733,8 +740,8 @@ class Interval2D(object):
 
         """ Shift the interval of *dxy*. """
 
-        self.x += dx
-        self.y += dy
+        self.x += dxy
+        self.y += dxy
         return self
 
     ##############################################
@@ -760,6 +767,13 @@ class Interval2D(object):
     def enlarge(self, dx):
 
         """ Enlarge the interval of dx. """
+
+        # if len(args) == 1:
+        #     dx = dy = args
+        # if len(args) == 2:
+        #     dx, dy = args
+        # else:
+        #     raise ValueError
 
         self.x.enlarge(dx)
         self.y.enlarge(dx)
@@ -890,9 +904,3 @@ class IntervalInt2D(Interval2D):
         for x in self.x.iter():
             for y in self.y.iter():
                 yield (x, y)
-
-####################################################################################################
-#
-# End
-#
-####################################################################################################
