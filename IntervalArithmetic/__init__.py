@@ -1,6 +1,6 @@
 ####################################################################################################
 #
-# ArithmeticInterval - A Python Arithmetic Interval Module
+# IntervalArithmetic - An Interval Arithmetic Module
 # Copyright (C) 2015 Fabrice Salvaire
 #
 # This program is free software: you can redistribute it and/or modify it under the terms
