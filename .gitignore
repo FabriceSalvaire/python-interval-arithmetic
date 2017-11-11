@@ -1,6 +1,13 @@
 *~
 __pycache__
+#
 MANIFEST
 build/
 dist/
+#
 setenv.sh
+.tox/
+doc/sphinx/source/api/
+doc/sphinx/unused/
+old/
+tools/make-examples
