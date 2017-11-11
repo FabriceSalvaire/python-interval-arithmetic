@@ -5,9 +5,5 @@
 
 .. no title here
 
-V1 2017-11-10
--------------
-
-Extracted source from https://github.com/FabriceSalvaire/PySpice
-
-.. End
+V0.2 2017-11-10
+---------------

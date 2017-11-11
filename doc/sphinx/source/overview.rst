@@ -10,7 +10,7 @@
 What is IntervalArithmetic ?
 ----------------------------
 
-IntervalArithmetic is free and open source (*) interval arithmetic package for |Python|_.
+IntervalArithmetic is a free and open source (*) interval arithmetic package for |Python|_.
 
 How is IntervalArithmetic licensed ?
 ------------------------------------

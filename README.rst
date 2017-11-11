@@ -98,17 +98,18 @@ Overview
 What is IntervalArithmetic ?
 ----------------------------
 
-IntervalArithmetic is free and open source (*) interval arithmetic package for |Python|_.
+IntervalArithmetic is a free and open source (*) interval arithmetic package for |Python|_.
 
 Where is the Documentation ?
 ----------------------------
 
 The documentation is available on the |IntervalArithmeticHomePage|_.
 
-What are the main features ?
-----------------------------
+..
+   What are the main features ?
+   ----------------------------
 
-* to be completed ...
+   * to be completed ...
 
 How to install it ?
 -------------------
@@ -128,9 +129,5 @@ News
 
 .. no title here
 
-V1 2017-11-10
--------------
-
-Extracted source from https://github.com/FabriceSalvaire/PySpice
-
-.. End
+V0.2 2017-11-10
+---------------
