@@ -1,0 +1,13 @@
+.. -*- Mode: rst -*-
+
+.. include:: abbreviation.txt
+.. include:: project-links.txt
+
+.. no title here
+
+V1 2017-11-10
+-------------
+
+Extracted source from https://github.com/FabriceSalvaire/PySpice
+
+.. End

@@ -1,7 +1,5 @@
 .. -*- Mode: rst -*-
 
-.. -*- Mode: rst -*-
-
 ..
    |IntervalArithmeticUrl|
    |IntervalArithmeticHomePage|_
@@ -50,87 +48,5 @@
 ..  coverage test
 ..  https://img.shields.io/pypi/status/Django.svg
 ..  https://img.shields.io/github/stars/badges/shields.svg?style=social&label=Star
-
-.. End
-.. -*- Mode: rst -*-
-
-.. |Python| replace:: Python
-.. _Python: http://python.org
-
-.. |PyPI| replace:: PyPI
-.. _PyPI: https://pypi.python.org/pypi
-
-.. |Numpy| replace:: Numpy
-.. _Numpy: http://www.numpy.org
-
-.. |IPython| replace:: IPython
-.. _IPython: http://ipython.org
-
-.. |Sphinx| replace:: Sphinx
-.. _Sphinx: http://sphinx-doc.org
-
-.. |Matplotlib| replace:: Matplotlib
-.. _Matplotlib: http://matplotlib.org
-
-.. |Circuit_macros| replace:: Circuit_macros
-.. _Circuit_macros: http://ece.uwaterloo.ca/~aplevich/Circuit_macros
-
-.. |Tikz| replace:: Tikz
-.. _Tikz: http://www.texample.net/tikz
-
-.. End
-
-====================
- IntervalArithmetic
-====================
-
-|Pypi License|
-|Pypi Python Version|
-
-|Pypi Version|
-
-* Quick Link to `Production Branch <https://github.com/FabriceSalvaire/python-interval-arithmetic/tree/master>`_
-* Quick Link to `Devel Branch <https://github.com/FabriceSalvaire/python-interval-arithmetic/tree/devel>`_
-
-Overview
-========
-
-What is IntervalArithmetic ?
-----------------------------
-
-IntervalArithmetic is free and open source (*) interval arithmetic package for |Python|_.
-
-Where is the Documentation ?
-----------------------------
-
-The documentation is available on the |IntervalArithmeticHomePage|_.
-
-What are the main features ?
-----------------------------
-
-* to be completed ...
-
-How to install it ?
--------------------
-
-Look at the `installation <https://fabricesalvaire.github.io/IntervalArithmetic/installation.html>`_ section in the documentation.
-
-Credits
-=======
-
-Authors: `Fabrice Salvaire <http://fabrice-salvaire.fr>`_
-
-News
-====
-
-.. -*- Mode: rst -*-
-
-
-.. no title here
-
-V1 2017-11-10
--------------
-
-Extracted source from https://github.com/FabriceSalvaire/PySpice
 
 .. End
