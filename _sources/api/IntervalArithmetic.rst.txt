@@ -1,0 +1,9 @@
+***************************
+ :mod:`IntervalArithmetic`
+***************************
+
+.. toctree::
+
+.. automodule:: IntervalArithmetic
+   :members:
+   :show-inheritance:

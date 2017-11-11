@@ -1,0 +1,600 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>7.1. IntervalArithmetic &mdash; IntervalArithmetic 0.2.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../static/css/IntervalArithmetic.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="IntervalArithmetic 0.2.0 documentation" href="../index.html"/>
+        <link rel="up" title="7. API Documentation" href="../reference-manual.html"/>
+        <link rel="next" title="8. Development &amp; Community" href="../development.html"/>
+        <link rel="prev" title="7. API Documentation" href="../reference-manual.html"/>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "classic",
+  "position": "bottom-right"
+})});
+</script>
+
+
+  
+  <script src="../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> IntervalArithmetic
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">1. Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../news.html">2. News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">3. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">4. User FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide.html">5. User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../design-notes.html">6. Design Notes</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../reference-manual.html">7. API Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">7.1. <code class="docutils literal"><span class="pre">IntervalArithmetic</span></code></a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../reference-manual.html#indexes">7.2. Indexes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../development.html">8. Development &amp; Community</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../how-to-refer.html">9. How to Refer to IntervalArithmetic ?</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">IntervalArithmetic</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../reference-manual.html">7. API Documentation</a> &raquo;</li>
+        
+      <li>7.1. <code class="docutils literal"><span class="pre">IntervalArithmetic</span></code></li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/IntervalArithmetic.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="intervalarithmetic">
+<h1>7.1. <a class="reference internal" href="#module-IntervalArithmetic" title="IntervalArithmetic"><code class="xref py py-mod docutils literal"><span class="pre">IntervalArithmetic</span></code></a><a class="headerlink" href="#intervalarithmetic" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<span class="target" id="module-IntervalArithmetic"></span><p>This module implements interval arithmetic.</p>
+<dl class="class">
+<dt id="IntervalArithmetic.Interval">
+<em class="property">class </em><code class="descclassname">IntervalArithmetic.</code><code class="descname">Interval</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/IntervalArithmetic.html#Interval"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IntervalArithmetic.Interval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<p>Interval [inf, sup] in the float domain.</p>
+<p>An interval can be constructed using a couple (inf, sup) or an object that support the
+<code class="xref py py-meth docutils literal"><span class="pre">__getitem__()</span></code> interface:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Interval</span><span class="p">(</span><span class="n">inf</span><span class="p">,</span> <span class="n">sup</span><span class="p">)</span>
+<span class="n">Interval</span><span class="p">((</span><span class="n">inf</span><span class="p">,</span> <span class="n">sup</span><span class="p">))</span>
+<span class="n">Interval</span><span class="p">(</span><span class="n">iterable</span><span class="p">)</span>
+<span class="n">Interval</span><span class="p">(</span><span class="n">interval</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>To get the interval boundaries, use the <code class="xref py py-attr docutils literal"><span class="pre">inf</span></code> and <code class="xref py py-attr docutils literal"><span class="pre">sup</span></code> attribute.</p>
+<p>An empty interval is defined with <em>inf</em> and <em>sup</em> set to <a class="reference external" href="https://docs.python.org/2/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-obj docutils literal"><span class="pre">None</span></code></a>.</p>
+<p>To compute the union of two intervals use:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">i3</span> <span class="o">=</span> <span class="n">i1</span> <span class="o">|</span> <span class="n">i2</span>
+<span class="n">i1</span> <span class="o">|=</span> <span class="n">i2</span>
+</pre></div>
+</div>
+<p>To compute the intersection of two intervals use:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">i3</span> <span class="o">=</span> <span class="n">i1</span> <span class="o">&amp;</span> <span class="n">i2</span>
+<span class="n">i1</span> <span class="o">&amp;=</span> <span class="n">i2</span>
+</pre></div>
+</div>
+<p>It returns an empty interval if the intersection is null.</p>
+<dl class="attribute">
+<dt id="IntervalArithmetic.Interval.center">
+<code class="descname">center</code><a class="headerlink" href="#IntervalArithmetic.Interval.center" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the interval’s center.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="IntervalArithmetic.Interval.clone">
+<code class="descname">clone</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#IntervalArithmetic.Interval.clone" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#IntervalArithmetic.Interval.copy" title="IntervalArithmetic.Interval.copy"><code class="xref py py-meth docutils literal"><span class="pre">copy()</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="IntervalArithmetic.Interval.copy">
+<code class="descname">copy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/IntervalArithmetic.html#Interval.copy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IntervalArithmetic.Interval.copy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a clone of the interval.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="IntervalArithmetic.Interval.enlarge">
+<code class="descname">enlarge</code><span class="sig-paren">(</span><em>dx</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/IntervalArithmetic.html#Interval.enlarge"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IntervalArithmetic.Interval.enlarge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enlarge the interval of <em>dx</em>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="IntervalArithmetic.Interval.intersect">
+<code class="descname">intersect</code><span class="sig-paren">(</span><em>i1</em>, <em>i2</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/IntervalArithmetic.html#Interval.intersect"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IntervalArithmetic.Interval.intersect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test whether the interval intersects with i2?</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="IntervalArithmetic.Interval.is_empty">
+<code class="descname">is_empty</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/IntervalArithmetic.html#Interval.is_empty"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IntervalArithmetic.Interval.is_empty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test if the interval is empty.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="IntervalArithmetic.Interval.is_included_in">
+<code class="descname">is_included_in</code><span class="sig-paren">(</span><em>i1</em>, <em>i2</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/IntervalArithmetic.html#Interval.is_included_in"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IntervalArithmetic.Interval.is_included_in" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test whether the interval is included in i1?</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="IntervalArithmetic.Interval.is_left_open">
+<code class="descname">is_left_open</code><a class="headerlink" href="#IntervalArithmetic.Interval.is_left_open" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="IntervalArithmetic.Interval.is_outside_of">
+<code class="descname">is_outside_of</code><span class="sig-paren">(</span><em>i1</em>, <em>i2</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/IntervalArithmetic.html#Interval.is_outside_of"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IntervalArithmetic.Interval.is_outside_of" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test whether the interval is outside of i2?</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="IntervalArithmetic.Interval.is_right_open">
+<code class="descname">is_right_open</code><a class="headerlink" href="#IntervalArithmetic.Interval.is_right_open" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="IntervalArithmetic.Interval.length">
+<code class="descname">length</code><a class="headerlink" href="#IntervalArithmetic.Interval.length" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return <code class="docutils literal"><span class="pre">sup</span> <span class="pre">-</span> <span class="pre">inf</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="IntervalArithmetic.Interval.map_in">
+<code class="descname">map_in</code><span class="sig-paren">(</span><em>interval_reference</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/IntervalArithmetic.html#Interval.map_in"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IntervalArithmetic.Interval.map_in" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a new interval shifted of <em>interval_reference.inf</em>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="IntervalArithmetic.Interval.map_x_in">
+<code class="descname">map_x_in</code><span class="sig-paren">(</span><em>x</em>, <em>clamp=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/IntervalArithmetic.html#Interval.map_x_in"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IntervalArithmetic.Interval.map_x_in" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return <code class="docutils literal"><span class="pre">x</span> <span class="pre">-</span> <span class="pre">inf</span></code>. If <em>clamp</em> parameter is set True then the value is clamped in the
+interval.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="IntervalArithmetic.Interval.radius">
+<code class="descname">radius</code><a class="headerlink" href="#IntervalArithmetic.Interval.radius" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return length / 2.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="IntervalArithmetic.Interval.unmap_x_in">
+<code class="descname">unmap_x_in</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/IntervalArithmetic.html#Interval.unmap_x_in"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IntervalArithmetic.Interval.unmap_x_in" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return <code class="docutils literal"><span class="pre">x</span> <span class="pre">+</span> <span class="pre">inf</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="IntervalArithmetic.Interval.zero_length">
+<code class="descname">zero_length</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/IntervalArithmetic.html#Interval.zero_length"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IntervalArithmetic.Interval.zero_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return <code class="docutils literal"><span class="pre">sup</span> <span class="pre">==</span> <span class="pre">inf</span></code>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="IntervalArithmetic.IntervalInt">
+<em class="property">class </em><code class="descclassname">IntervalArithmetic.</code><code class="descname">IntervalInt</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/IntervalArithmetic.html#IntervalInt"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IntervalArithmetic.IntervalInt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#IntervalArithmetic.Interval" title="IntervalArithmetic.Interval"><code class="xref py py-class docutils literal"><span class="pre">IntervalArithmetic.Interval</span></code></a></p>
+<p>Interval [inf, sup] in the integer domain.</p>
+<dl class="attribute">
+<dt id="IntervalArithmetic.IntervalInt.is_left_open">
+<code class="descname">is_left_open</code><a class="headerlink" href="#IntervalArithmetic.IntervalInt.is_left_open" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="IntervalArithmetic.IntervalInt.is_right_open">
+<code class="descname">is_right_open</code><a class="headerlink" href="#IntervalArithmetic.IntervalInt.is_right_open" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="IntervalArithmetic.IntervalInt.iter">
+<code class="descname">iter</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/IntervalArithmetic.html#IntervalInt.iter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IntervalArithmetic.IntervalInt.iter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="IntervalArithmetic.IntervalInt.length">
+<code class="descname">length</code><a class="headerlink" href="#IntervalArithmetic.IntervalInt.length" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return <code class="docutils literal"><span class="pre">sup</span> <span class="pre">-</span> <span class="pre">inf</span> <span class="pre">+1</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="IntervalArithmetic.IntervalInt.length_float">
+<code class="descname">length_float</code><a class="headerlink" href="#IntervalArithmetic.IntervalInt.length_float" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return <code class="docutils literal"><span class="pre">sup</span> <span class="pre">-</span> <span class="pre">inf</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="IntervalArithmetic.IntervalInt.slice">
+<code class="descname">slice</code><a class="headerlink" href="#IntervalArithmetic.IntervalInt.slice" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a slice instance.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="IntervalArithmetic.IntervalIntSupOpen">
+<em class="property">class </em><code class="descclassname">IntervalArithmetic.</code><code class="descname">IntervalIntSupOpen</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/IntervalArithmetic.html#IntervalIntSupOpen"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IntervalArithmetic.IntervalIntSupOpen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#IntervalArithmetic.IntervalInt" title="IntervalArithmetic.IntervalInt"><code class="xref py py-class docutils literal"><span class="pre">IntervalArithmetic.IntervalInt</span></code></a></p>
+<p>Interval [inf, sup[ in the integer domain.</p>
+<dl class="method">
+<dt id="IntervalArithmetic.IntervalIntSupOpen.exclude">
+<code class="descname">exclude</code><span class="sig-paren">(</span><em>i1</em>, <em>i2</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/IntervalArithmetic.html#IntervalIntSupOpen.exclude"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IntervalArithmetic.IntervalIntSupOpen.exclude" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the subset intervals of <em>i1</em> given an exclusion interval <em>i2</em>.</p>
+<p>It returns <a class="reference external" href="https://docs.python.org/2/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-obj docutils literal"><span class="pre">None</span></code></a> if the intervals don’t intersect or <em>i1</em> is included in <em>i2</em>.  Else
+it returns a list of couples (interval, excluded_flag) where <em>interval</em> is a subset of the
+interval <em>i1</em> and <em>excluded_flag</em> indicated if the subset is excluded.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="IntervalArithmetic.IntervalIntSupOpen.intersect">
+<code class="descname">intersect</code><span class="sig-paren">(</span><em>i1</em>, <em>i2</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/IntervalArithmetic.html#IntervalIntSupOpen.intersect"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IntervalArithmetic.IntervalIntSupOpen.intersect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Does the interval intersect with <em>i2</em>?</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="IntervalArithmetic.IntervalIntSupOpen.minus">
+<code class="descname">minus</code><span class="sig-paren">(</span><em>i1</em>, <em>i2</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/IntervalArithmetic.html#IntervalIntSupOpen.minus"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IntervalArithmetic.IntervalIntSupOpen.minus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a list of intervals corresponding to i1 - intersection of i1 and i2. If i2 is
+included in i1 then two intervals can be returned. If the compution is not defined then
+<a class="reference external" href="https://docs.python.org/2/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-obj docutils literal"><span class="pre">None</span></code></a> is returned.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="IntervalArithmetic.Interval2D">
+<em class="property">class </em><code class="descclassname">IntervalArithmetic.</code><code class="descname">Interval2D</code><span class="sig-paren">(</span><em>x</em>, <em>y</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/IntervalArithmetic.html#Interval2D"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IntervalArithmetic.Interval2D" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<p>Interval [inf, sup]*[inf, sup] in the float domain.</p>
+<p>The components can be accessed using the <code class="xref py py-attr docutils literal"><span class="pre">x</span></code> and <code class="xref py py-attr docutils literal"><span class="pre">y</span></code> attribute, or using an index
+interface where the index 0 maps to <em>x</em> and 1 to <em>y</em>, respectively.</p>
+<dl class="attribute">
+<dt id="IntervalArithmetic.Interval2D.area">
+<code class="descname">area</code><a class="headerlink" href="#IntervalArithmetic.Interval2D.area" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the area.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="IntervalArithmetic.Interval2D.bounding_box">
+<code class="descname">bounding_box</code><a class="headerlink" href="#IntervalArithmetic.Interval2D.bounding_box" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the corresponding bounding box <code class="docutils literal"><span class="pre">(x.inf,</span> <span class="pre">y.inf,</span> <span class="pre">x.sup,</span> <span class="pre">y.sup)</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="IntervalArithmetic.Interval2D.center">
+<code class="descname">center</code><a class="headerlink" href="#IntervalArithmetic.Interval2D.center" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the interval’s center.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="IntervalArithmetic.Interval2D.clone">
+<code class="descname">clone</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#IntervalArithmetic.Interval2D.clone" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#IntervalArithmetic.Interval2D.copy" title="IntervalArithmetic.Interval2D.copy"><code class="xref py py-meth docutils literal"><span class="pre">copy()</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="IntervalArithmetic.Interval2D.copy">
+<code class="descname">copy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/IntervalArithmetic.html#Interval2D.copy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IntervalArithmetic.Interval2D.copy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a clone of the interval.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="IntervalArithmetic.Interval2D.diagonal">
+<code class="descname">diagonal</code><a class="headerlink" href="#IntervalArithmetic.Interval2D.diagonal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the diagonal’s length.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="IntervalArithmetic.Interval2D.enlarge">
+<code class="descname">enlarge</code><span class="sig-paren">(</span><em>dx</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/IntervalArithmetic.html#Interval2D.enlarge"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IntervalArithmetic.Interval2D.enlarge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enlarge the interval of dx.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="IntervalArithmetic.Interval2D.intersect">
+<code class="descname">intersect</code><span class="sig-paren">(</span><em>i2</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/IntervalArithmetic.html#Interval2D.intersect"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IntervalArithmetic.Interval2D.intersect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test whether the interval intersects with i2?</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="IntervalArithmetic.Interval2D.is_empty">
+<code class="descname">is_empty</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/IntervalArithmetic.html#Interval2D.is_empty"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IntervalArithmetic.Interval2D.is_empty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test if the interval is empty.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="IntervalArithmetic.Interval2D.is_included_in">
+<code class="descname">is_included_in</code><span class="sig-paren">(</span><em>i2</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/IntervalArithmetic.html#Interval2D.is_included_in"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IntervalArithmetic.Interval2D.is_included_in" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test whether the interval is included in i2?</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="IntervalArithmetic.Interval2D.map_in">
+<code class="descname">map_in</code><span class="sig-paren">(</span><em>interval_reference</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/IntervalArithmetic.html#Interval2D.map_in"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IntervalArithmetic.Interval2D.map_in" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construct a new interval shifted of <em>interval_reference.inf</em>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="IntervalArithmetic.Interval2D.map_xy_in">
+<code class="descname">map_xy_in</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>clamp=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/IntervalArithmetic.html#Interval2D.map_xy_in"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IntervalArithmetic.Interval2D.map_xy_in" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return <code class="docutils literal"><span class="pre">(x</span> <span class="pre">-</span> <span class="pre">y.inf,</span> <span class="pre">y</span> <span class="pre">-</span> <span class="pre">y.inf)</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="IntervalArithmetic.Interval2D.radius">
+<code class="descname">radius</code><a class="headerlink" href="#IntervalArithmetic.Interval2D.radius" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the horizontal and vertical radius.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="IntervalArithmetic.Interval2D.shift">
+<code class="descname">shift</code><span class="sig-paren">(</span><em>dx</em>, <em>dy</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/IntervalArithmetic.html#Interval2D.shift"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IntervalArithmetic.Interval2D.shift" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shift the interval of (dx, dy).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="IntervalArithmetic.Interval2D.size">
+<code class="descname">size</code><a class="headerlink" href="#IntervalArithmetic.Interval2D.size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the horizontal and vertical length.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="IntervalArithmetic.Interval2D.unmap_xy_in">
+<code class="descname">unmap_xy_in</code><span class="sig-paren">(</span><em>x</em>, <em>y</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/IntervalArithmetic.html#Interval2D.unmap_xy_in"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IntervalArithmetic.Interval2D.unmap_xy_in" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return <code class="docutils literal"><span class="pre">(x</span> <span class="pre">+</span> <span class="pre">y.inf,</span> <span class="pre">y</span> <span class="pre">+</span> <span class="pre">y.inf)</span></code>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="IntervalArithmetic.IntervalInt2D">
+<em class="property">class </em><code class="descclassname">IntervalArithmetic.</code><code class="descname">IntervalInt2D</code><span class="sig-paren">(</span><em>x</em>, <em>y</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/IntervalArithmetic.html#IntervalInt2D"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IntervalArithmetic.IntervalInt2D" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#IntervalArithmetic.Interval2D" title="IntervalArithmetic.Interval2D"><code class="xref py py-class docutils literal"><span class="pre">IntervalArithmetic.Interval2D</span></code></a></p>
+<p>Interval [inf, sup]*[inf, sup] in the integer domain.</p>
+<dl class="method">
+<dt id="IntervalArithmetic.IntervalInt2D.iter">
+<code class="descname">iter</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/IntervalArithmetic.html#IntervalInt2D.iter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IntervalArithmetic.IntervalInt2D.iter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../development.html" class="btn btn-neutral float-right" title="8. Development &amp; Community" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../reference-manual.html" class="btn btn-neutral" title="7. API Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Fabrice Salvaire.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.2.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../static/jquery.js"></script>
+      <script type="text/javascript" src="../static/underscore.js"></script>
+      <script type="text/javascript" src="../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script type="text/javascript" src="../static/hidecode.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://stats.fabrice-salvaire.fr/";
+    _paq.push(['setTrackerUrl', u+'kiwi']);
+    _paq.push(['setSiteId', 6]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'kiwi.js';
+  s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="https://stats.fabrice-salvaire.fr/kiwi?idsite=6&rec=1" style="border:0;" alt="" /></p></noscript>
+
+
+</body>
+</html>
