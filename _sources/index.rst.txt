@@ -9,7 +9,7 @@
 	.spacer {height: 30px}
 
         .reduced-width {
-	    max-width: 800px
+	    max-width: 850px
         }
 
         .row {clear: both}
@@ -50,7 +50,7 @@
 Overview
 ********
 
-IntervalArithmetic is free and open source (*) interval arithmetic package for |Python|_.
+IntervalArithmetic is a free and open source (*) interval arithmetic package for |Python|_.
 
 .. rst-class:: small-text
 
