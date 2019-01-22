@@ -517,6 +517,8 @@ class IntervalInt(Interval):
 
     def iter(self):
 
+        # don't confound with __iter__
+
         return range(self.inf, self.sup +1)
 
 ####################################################################################################
