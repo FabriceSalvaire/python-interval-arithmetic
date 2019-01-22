@@ -677,6 +677,16 @@ class Interval2D(object):
 
     ##############################################
 
+    @property
+    def rect(self):
+
+        """ Return ``(x.inf, y.inf, x.sup - x.inf, y.sup - y.in)``. """
+
+        return (self.x.inf, self.y.inf,
+                self.x.length, self.y.length)
+
+    ##############################################
+
     def is_empty(self):
 
         """ Test if the interval is empty. """
@@ -906,3 +916,12 @@ class IntervalInt2D(Interval2D):
         for x in self.x.iter():
             for y in self.y.iter():
                 yield (x, y)
+
+    ##############################################
+
+    @property
+    def size_float(self):
+
+        """ Return the horizontal and vertical length. """
+
+        return self.x.length_float, self.y.length_float

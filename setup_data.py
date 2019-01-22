@@ -74,7 +74,7 @@ else:
 
 setup_dict = dict(
     name='IntervalArithmetic',
-    version='0.2.0',
+    version='0.3.0',
     author='Fabrice Salvaire',
     author_email='fabrice.salvaire@orange.fr',
     description='An interval arithmetic module',
